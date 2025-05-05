@@ -124,7 +124,7 @@ async def handle_photo(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Ошибка при обработке изображения. Попробуй отправить другое!")
 
 def main():
-    app = Application.builder().token("7728668681:AAELyGiEJVl7ECeeJx3OXYUIBarsCLdbygU").build()
+    app = Application.builder().token("ваш_токен").build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
     app.add_handler(MessageHandler(filters.PHOTO, handle_photo))
